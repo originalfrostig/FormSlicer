@@ -8928,9 +8928,17 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 1048831113}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 42000000
+  m_SelectedEdges:
+  - a: 264
+    b: 265
+  - a: 266
+    b: 264
+  - a: 265
+    b: 267
+  - a: 267
+    b: 266
+  m_SelectedVertices: 08010000090100000a0100000b010000
 --- !u!4 &494488435
 Transform:
   m_ObjectHideFlags: 0
@@ -9196,7 +9204,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21780
+  m_Name: pb_Mesh24570
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9360,7 +9368,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21746
+  m_Name: pb_Mesh24536
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12503,7 +12511,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21734
+  m_Name: pb_Mesh24524
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
