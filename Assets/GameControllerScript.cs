@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerScript : MonoBehaviour
 {
 
+    private int menuScenes = 2;
     public int currentScene = 0;
 
     private void Start()
@@ -33,5 +34,10 @@ public class GameControllerScript : MonoBehaviour
     {
         currentScene = sceneNumber;
         SceneManager.LoadSceneAsync(currentScene);
+    }
+
+    public int getLevelScene()
+    {
+        return currentScene - menuScenes;
     }
 }
