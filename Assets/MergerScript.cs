@@ -13,7 +13,8 @@ public class MergerScript : MonoBehaviour
     public Transform pos;
 
     private LevelControllerScript _levelControllerScript;
-    
+
+    public GameObject canvas;
     
     private void Start()
     {
@@ -25,6 +26,9 @@ public class MergerScript : MonoBehaviour
     {
         if (parts.Count >= amountParts)
         {
+            
+            canvas.SetActive(true);
+            
             foreach (GameObject part in parts)
             {
                 part.SetActive(false);
