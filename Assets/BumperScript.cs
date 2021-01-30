@@ -6,7 +6,7 @@ using UnityEngine;
 public class BumperScript : MonoBehaviour
 {
 
-    private float strength = 1000;
+    public float strength = 100;
     
     
 
