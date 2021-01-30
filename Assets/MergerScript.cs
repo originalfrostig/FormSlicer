@@ -12,6 +12,14 @@ public class MergerScript : MonoBehaviour
 
     public Transform pos;
 
+    private LevelControllerScript _levelControllerScript;
+    
+    
+    private void Start()
+    {
+        _levelControllerScript = FindObjectOfType<LevelControllerScript>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +34,7 @@ public class MergerScript : MonoBehaviour
             player.transform.position = pos.position;
             player.SetActive(true);
 
+            _levelControllerScript.winGame();
             this.enabled = false;
 
         }
