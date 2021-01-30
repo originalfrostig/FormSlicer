@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,11 @@ public class NaturalGravityMovment : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
@@ -79,7 +85,27 @@ public class NaturalGravityMovment : MonoBehaviour
         
         
     }
-    
+
+    public void setDirection(Vector3 newDirection)
+    {
+        directionVector = newDirection;
+    }
+
+    public void setVelocity(Vector3 newVelocity)
+    {
+        rb.velocity = newVelocity;
+    }
+
+    public Vector3 getDirection()
+    {
+
+        return directionVector;
+    }
+
+    public Vector3 getVelocity()
+    {
+        return rb.velocity;
+    }
     
     
 }
