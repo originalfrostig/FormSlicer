@@ -67,6 +67,11 @@ public class NaturalGravityMovment : MonoBehaviour
         float xMovment = swipeDirection.x;
         float yMovment = swipeDirection.y;
 
+      //  xMovment = xMovment / Math.Abs(xMovment);
+     //   yMovment = yMovment / Math.Abs(yMovment);
+        
+     //   directionVector = new Vector3(xMovment,0,yMovment);
+
         if (xMovment > 0 && yMovment > 0)
         {
             setCurrentVelocity(2);
@@ -79,15 +84,15 @@ public class NaturalGravityMovment : MonoBehaviour
         
         if (xMovment < 0 && yMovment > 0)
         {
+            setCurrentVelocity(0);
+        }
+
+        if (xMovment > 0 && yMovment < 0)
+        {
             setCurrentVelocity(1);
         }
 
-        if (xMovment < 0 && yMovment > 0)
-        {
-            setCurrentVelocity(2);
-        }
-
- /*       if (Math.Abs(xMovment) > Math.Abs(yMovment))
+   /*    if (Math.Abs(xMovment) > Math.Abs(yMovment))
         {
             if (xMovment > 0)
             {
