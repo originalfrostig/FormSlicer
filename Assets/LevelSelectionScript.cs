@@ -12,6 +12,7 @@ public class LevelSelectionScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
        lastLevel = PlayerPrefs.GetInt("Level", 0);
        Debug.Log(lastLevel);
 
@@ -22,7 +23,7 @@ public class LevelSelectionScript : MonoBehaviour
        
        for (int i = 0; i < levelButtons.Count; i++)
        {
-           if (lastLevel+1 < i)
+           if (lastLevel < i)
            {
                break;
            }

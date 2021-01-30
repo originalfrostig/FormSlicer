@@ -8,26 +8,28 @@ using Object = System.Object;
 public class LevelControllerScript : MonoBehaviour
 {
     private GameControllerScript _gameControllerScript;
-    private int currentLevel;
+    private int nextLevel;
     private float waitTime = 5;
 
     private void Start()
     {
         
         _gameControllerScript =  FindObjectOfType<GameControllerScript>();
-        currentLevel = _gameControllerScript.getLevelScene();
+        nextLevel = _gameControllerScript.getLevelScene()+1;
     }
 
 
     public void winGame()
     {
         
+        if (PlayerPrefs.GetInt("Level",0) < nextLevel)
+        {
+            PlayerPrefs.SetInt("Level",nextLevel);
+        } 
+        
         StartCoroutine(wait());
         
-        if (PlayerPrefs.GetInt("Level",0) < currentLevel)
-        {
-            PlayerPrefs.SetInt("Level",currentLevel);
-        } 
+        
         
         
         
