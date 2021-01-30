@@ -36,6 +36,11 @@ public class GameControllerScript : MonoBehaviour
         SceneManager.LoadSceneAsync(currentScene);
     }
 
+    public void loadCurrentScene()
+    {
+        SceneManager.LoadSceneAsync(currentScene);
+    }
+
     public int getLevelScene()
     {
         return currentScene - menuScenes;

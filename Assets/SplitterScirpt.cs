@@ -7,18 +7,16 @@ public class SplitterScirpt : MonoBehaviour
 {
 
     public GameObject[] playerParts;
-    
-    
 
-    private void OnCollisionEnter(Collision other)
-    {
-        
-    }
+    public GameObject canvas;
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
+            canvas.SetActive(true);
             
             Vector3 currentVelocity = other.gameObject.GetComponent<NaturalGravityMovment>().getVelocity();
             Vector3 direction = other.gameObject.GetComponent<NaturalGravityMovment>().getDirection();
