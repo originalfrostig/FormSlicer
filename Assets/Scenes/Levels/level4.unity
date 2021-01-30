@@ -431,6 +431,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3286642252951350974, guid: 8f3243c3ca2626f48ae8f0e4c419d561, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286642252951350974, guid: 8f3243c3ca2626f48ae8f0e4c419d561, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7171018690047598382, guid: 8f3243c3ca2626f48ae8f0e4c419d561, type: 3}
       propertyPath: m_Name
       value: Splitter
@@ -564,7 +572,7 @@ Transform:
   m_Children:
   - {fileID: 1648095165}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
 --- !u!114 &496404270
 MonoBehaviour:
@@ -18441,7 +18449,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27758
+  m_Name: pb_Mesh21532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
