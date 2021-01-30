@@ -22,7 +22,7 @@ public class LevelSelectionScript : MonoBehaviour
        
        for (int i = 0; i < levelButtons.Count; i++)
        {
-           if (lastLevel < i)
+           if (lastLevel+1 < i)
            {
                break;
            }
