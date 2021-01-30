@@ -14,6 +14,14 @@ public class GameControllerScript : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+           Application.Quit();
+        }
+    }
+
     public void changeScene()
     {
         currentScene++;
