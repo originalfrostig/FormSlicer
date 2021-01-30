@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Lean.Touch;
 using UnityEngine;
 
 public class NaturalGravityMovment : MonoBehaviour
@@ -68,7 +67,27 @@ public class NaturalGravityMovment : MonoBehaviour
         float xMovment = swipeDirection.x;
         float yMovment = swipeDirection.y;
 
-        if (Math.Abs(xMovment) > Math.Abs(yMovment))
+        if (xMovment > 0 && yMovment > 0)
+        {
+            setCurrentVelocity(2);
+        }
+
+        if (xMovment < 0 && yMovment < 0)
+        {
+            setCurrentVelocity(3);
+        }
+        
+        if (xMovment < 0 && yMovment > 0)
+        {
+            setCurrentVelocity(1);
+        }
+
+        if (xMovment < 0 && yMovment > 0)
+        {
+            setCurrentVelocity(2);
+        }
+
+ /*       if (Math.Abs(xMovment) > Math.Abs(yMovment))
         {
             if (xMovment > 0)
             {
@@ -89,7 +108,7 @@ public class NaturalGravityMovment : MonoBehaviour
             {
                 setCurrentVelocity(1);
             }
-        }
+        } */
         
     }
 
