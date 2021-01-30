@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,11 @@ public class GameControllerScript : MonoBehaviour
 {
 
     public int currentScene = 0;
+
+    private void Start()
+    {
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+    }
 
     public void changeScene()
     {
