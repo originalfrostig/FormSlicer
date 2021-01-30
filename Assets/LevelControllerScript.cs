@@ -9,7 +9,7 @@ public class LevelControllerScript : MonoBehaviour
 {
     private GameControllerScript _gameControllerScript;
     private int currentLevel;
-    public float waitTime;
+    private float waitTime = 5;
 
     private void Start()
     {
@@ -40,7 +40,7 @@ public class LevelControllerScript : MonoBehaviour
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(waitTime);
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
