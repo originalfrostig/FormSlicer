@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Lean.Touch;
 using UnityEngine;
 
 public class NaturalGravityMovment : MonoBehaviour
@@ -9,12 +10,20 @@ public class NaturalGravityMovment : MonoBehaviour
     public float movmentSpeed;
     private Rigidbody rb;
     private Vector3 directionVector;
+    
+    
+    private Vector2 initialPosition;
+
+   
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
+
     }
+    
 
     private void Awake()
     {
@@ -24,7 +33,68 @@ public class NaturalGravityMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
+        getSwipe();
+        
+       getInput();
+        
+        
+    }
+
+    private void getSwipe()
+    {
+        if (Input.touchCount == 1)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began)
+            {
+                initialPosition = touch.position;
+            }
+            else if(touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+            {
+                Vector2 swipeDirection = touch.position - initialPosition;
+
+                swipeToMovment(swipeDirection);
+                
+            }
+        }
+    }
+
+    private void swipeToMovment(Vector2 swipeDirection)
+    {
+        
+        float xMovment = swipeDirection.x;
+        float yMovment = swipeDirection.y;
+
+        if (Math.Abs(xMovment) > Math.Abs(yMovment))
+        {
+            if (xMovment > 0)
+            {
+                setCurrentVelocity(2);
+            }
+            else
+            {
+                setCurrentVelocity(3);
+            }
+        }
+        else
+        {
+            if (yMovment > 0)
+            {
+                setCurrentVelocity(0);
+            }
+            else
+            {
+                setCurrentVelocity(1);
+            }
+        }
+        
+    }
+
+    private void getInput()
+    {
         addForce();
         
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -49,10 +119,7 @@ public class NaturalGravityMovment : MonoBehaviour
         {
             setCurrentVelocity(1);
             return;
-        }
-        
-        
-        
+        } 
     }
 
 
