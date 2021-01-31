@@ -11,7 +11,7 @@ public class PressureSwitchScript : MonoBehaviour
     public Transform wallTop;
     public Transform wallBottom;
 
-    private float speed = 1.5f;
+    private float speed = 4f;
     
     public bool isOn;
     public Material active;
