@@ -10,10 +10,11 @@ public class LevelControllerScript : MonoBehaviour
     private GameControllerScript _gameControllerScript;
     private int nextLevel;
     private float waitTime = 5;
+    private AudioSource _audioSource;
 
     private void Start()
     {
-        
+        _audioSource = GetComponent<AudioSource>();
         _gameControllerScript =  FindObjectOfType<GameControllerScript>();
         nextLevel = _gameControllerScript.getLevelScene()+1;
     }
@@ -27,6 +28,8 @@ public class LevelControllerScript : MonoBehaviour
             PlayerPrefs.SetInt("Level",nextLevel);
         } 
         
+        
+        _audioSource.Play();
         StartCoroutine(wait());
         
         

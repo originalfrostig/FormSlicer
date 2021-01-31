@@ -9,12 +9,20 @@ public class SplitterScirpt : MonoBehaviour
     public GameObject[] playerParts;
 
     public GameObject canvas;
-    
+
+    private AudioSource _audioSource;
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
+            _audioSource.Play();
             
             canvas.SetActive(true);
             

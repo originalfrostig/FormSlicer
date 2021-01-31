@@ -15,10 +15,13 @@ public class MergerScript : MonoBehaviour
     private LevelControllerScript _levelControllerScript;
 
     public GameObject canvas;
+
+    private AudioSource _audioSource;
     
     private void Start()
     {
         _levelControllerScript = FindObjectOfType<LevelControllerScript>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,8 @@ public class MergerScript : MonoBehaviour
     {
         if (parts.Count >= amountParts)
         {
+            
+            _audioSource.Play();
             
             canvas.SetActive(true);
             

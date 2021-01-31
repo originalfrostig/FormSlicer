@@ -45,4 +45,17 @@ public class GameControllerScript : MonoBehaviour
     {
         return currentScene - menuScenes;
     }
+
+    public bool lastScene()
+    {
+        if (SceneManager.sceneCountInBuildSettings - 1 == currentScene)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
 }
