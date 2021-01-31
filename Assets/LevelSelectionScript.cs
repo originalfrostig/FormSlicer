@@ -13,6 +13,7 @@ public class LevelSelectionScript : MonoBehaviour
     void Start()
     {
         
+        
        lastLevel = PlayerPrefs.GetInt("Level", 0);
        Debug.Log(lastLevel);
 
@@ -23,12 +24,12 @@ public class LevelSelectionScript : MonoBehaviour
        
        for (int i = 0; i < levelButtons.Count; i++)
        {
-           if (lastLevel < i)
+           if (lastLevel >= i)
            {
-               break;
+               levelButtons[i].interactable = true;
            }
 
-           levelButtons[i].interactable = true;
+           
        }
 
     }
