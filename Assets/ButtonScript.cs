@@ -17,6 +17,10 @@ public class ButtonScript : MonoBehaviour
 
     private void onClick()
     {
-        FindObjectOfType<MusicController>().playSound(_audioClip);
+        if (FindObjectOfType<MusicController>() != null)
+        {
+            FindObjectOfType<MusicController>().playSound(_audioClip);  
+        }
+        
     }
 }

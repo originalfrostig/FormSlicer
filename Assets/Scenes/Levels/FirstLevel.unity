@@ -6142,8 +6142,9 @@ GameObject:
   - component: {fileID: 742344714}
   - component: {fileID: 742344713}
   - component: {fileID: 742344712}
+  - component: {fileID: 742344716}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6231,7 +6232,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1237965253}
         m_TargetAssemblyTypeName: GameControllerScript, Assembly-CSharp
         m_MethodName: loadScene
         m_Mode: 3
@@ -6281,6 +6282,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742344710}
   m_CullTransparentMesh: 1
+--- !u!114 &742344716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742344710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5d447b4756a3448a552668a8172480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 22e7c073bc1e2904fb9d6d08ca9249fd, type: 3}
 --- !u!4 &765531036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf9165aa7e2aa0642a194708bf490804, type: 3}
@@ -6551,8 +6565,9 @@ GameObject:
   - component: {fileID: 859120460}
   - component: {fileID: 859120459}
   - component: {fileID: 859120458}
+  - component: {fileID: 859120462}
   m_Layer: 5
-  m_Name: Button
+  m_Name: refresh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6640,7 +6655,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1237965253}
         m_TargetAssemblyTypeName: GameControllerScript, Assembly-CSharp
         m_MethodName: loadCurrentScene
         m_Mode: 1
@@ -6690,6 +6705,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859120456}
   m_CullTransparentMesh: 1
+--- !u!114 &859120462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859120456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5d447b4756a3448a552668a8172480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: b3b670b0dc8574d49b84c520ab8961a3, type: 3}
 --- !u!4 &885852508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6645175036841847086, guid: bc72c454f58917642a5e9bd3fc8aed0f, type: 3}
@@ -7902,6 +7930,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1237965253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7134952850931837987, guid: a58d1cc8caf97e341bdcc29a5a027586, type: 3}
+  m_PrefabInstance: {fileID: 2104429910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85f6be867af93b4fa2a9a3e199f3007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1262241926
 PrefabInstance:
   m_ObjectHideFlags: 0
