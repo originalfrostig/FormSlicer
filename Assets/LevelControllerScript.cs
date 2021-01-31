@@ -8,24 +8,24 @@ using Object = System.Object;
 public class LevelControllerScript : MonoBehaviour
 {
     private GameControllerScript _gameControllerScript;
-    private int nextLevel;
     private float waitTime = 5;
     private AudioSource _audioSource;
+    public int currentLevel;
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _gameControllerScript =  FindObjectOfType<GameControllerScript>();
-        nextLevel = _gameControllerScript.getLevelScene()+1;
+        currentLevel = SceneManager.GetActiveScene().buildIndex - 1;
     }
 
 
     public void winGame()
     {
         
-        if (PlayerPrefs.GetInt("Level",0) < nextLevel)
+        if (PlayerPrefs.GetInt("Level",0) < currentLevel)
         {
-            PlayerPrefs.SetInt("Level",nextLevel);
+            PlayerPrefs.SetInt("Level",currentLevel);
         } 
         
         
