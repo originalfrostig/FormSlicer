@@ -14,9 +14,19 @@ public class PressureSwitchScript : MonoBehaviour
     private float speed = 1f;
     
     public bool isOn;
+    public Material active;
+    public Material inactive;
+    private Material[] inactiveMaterials;
+    private Material[] activeMaterials;
+    private MeshRenderer renderer;
 
 
-
+    private void Start()
+    {
+        renderer = GetComponent<MeshRenderer>();
+        this.activeMaterials = new[] {renderer.materials[0], active};
+        this.inactiveMaterials = new[] {renderer.materials[0], inactive};
+    }
 
     // Update is called once per frame
     void Update()
@@ -52,7 +62,8 @@ public class PressureSwitchScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            isOn = true;  
+            isOn = true;
+            renderer.materials = activeMaterials;
         }
     }
 
@@ -61,6 +72,8 @@ public class PressureSwitchScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             isOn = false;  
+            renderer.materials = inactiveMaterials;
+
         }
     }
 }

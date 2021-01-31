@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 98c1d701578773d43bfa9c7bbe6f78d2
+guid: 3dade55a4435b1049a6f4fa3bb5e2b6a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate
+    second: {fileID: 2100000, guid: ba351a08db2171742889b97c1aab365a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Socket
+    second: {fileID: 2100000, guid: 1bc44c5c1e8c09740b71299fa2d1de55, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
