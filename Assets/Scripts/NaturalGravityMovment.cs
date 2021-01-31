@@ -13,16 +13,20 @@ public class NaturalGravityMovment : MonoBehaviour
     
     private Vector2 initialPosition;
 
+    private AudioSource _audioSource;
    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
-
+        _audioSource = GetComponent<AudioSource>();
     }
-    
+
+    private void OnDisable()
+    {
+        _audioSource.enabled = false;
+    }
 
     private void Awake()
     {
@@ -33,11 +37,24 @@ public class NaturalGravityMovment : MonoBehaviour
     void Update()
     {
 
+        if (rb.velocity.magnitude > 0.01f)
+        {
+            if (!_audioSource.isPlaying)
+            {
+                _audioSource.Play();
+            }
+          
+        }
+        else
+        {
+            _audioSource.Stop();
+        }
         
         getSwipe();
         
        getInput();
-        
+
+      
         
     }
 
